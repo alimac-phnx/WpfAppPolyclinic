@@ -1,0 +1,31 @@
+﻿<Page x:Class="WpfApp.Page0"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="Page0">
+
+    <Grid Background="#FFABC7CB">
+        <Rectangle HorizontalAlignment="Center" Height="400" Margin="41,84,41,0" VerticalAlignment="Top" Width="718" RadiusX="20" RadiusY="20" Fill="#FFF6F6F6"></Rectangle>
+        <DataGrid x:Name="dataGridXAML" HorizontalAlignment="Left" Height="333" Margin="51,136,0,0" VerticalAlignment="Top" Width="679">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}" Width="100"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="100"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Secname}" Width="100"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthday}" Width="95"/>
+                <DataGridTextColumn Header="Пол" Binding="{Binding Pol}" Width="100"/>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Adress}" Width="80"/>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding Phonenumber}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="AddPatbut" Click="AddPatbut_Click" ToolTip="Зарегистрировать нового пациента" Content="➕" HorizontalAlignment="Left" Height="40" Margin="80,32,0,0" VerticalAlignment="Top" Width="60" FontWeight="Bold" BorderBrush="{x:Null}" Panel.ZIndex="20" Command="{Binding ClickMode, ElementName=button}" FontSize="16"/>
+        <Button x:Name="FindPatbut"  Click="FindPatbut_Click" ToolTip="Найти пациента" Content="🔍" HorizontalAlignment="Left" Height="40" Margin="661,32,0,0" VerticalAlignment="Top" Width="60" FontWeight="Bold" BorderBrush="{x:Null}" RenderTransformOrigin="-1.093,0.536" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Height="58" Margin="255.5,14,0,0" TextWrapping="Wrap" Text="MyClinic" VerticalAlignment="Top" Width="288" FontFamily="Castellar" FontSize="48"/>
+        <ComboBox x:Name="comBoBox" HorizontalAlignment="Left" Height="22" Margin="620,106,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button Content="Фильтровать" Click="Button_Click" HorizontalAlignment="Left" Height="20" Margin="635,84,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.447,-0.043" Background="#FFF6F6F6" BorderBrush="#FFF6F6F6"/>
+
+    </Grid>
+</Page>
